@@ -1,0 +1,30 @@
+.home {
+    // padding-bottom: 3.75rem;
+    box-sizing: border-box;
+
+    .text {
+        font-size: 16px;
+    }
+
+    &-catalog {
+        box-sizing: border-box;
+        width: 100vw;
+        overflow-x: hidden;
+        // overflow-y: hidden;
+    }
+
+    .langSelect {
+        position: absolute;
+        left: 13px;
+        top: 12px;
+    }
+}
+
+@media screen and (min-width: 768Px) {
+
+    .home {
+        &-catalog {
+            padding: 0.9375rem calc((100% - 1300PX)/2);
+        }
+    }
+}
