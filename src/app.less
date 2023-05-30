@@ -1,0 +1,76 @@
+.blueMask {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(266.21000000000004deg, #46AEF7 0%, #B9E2FE 100%);
+        opacity: 0.1;
+        border-radius: 4px;
+    }
+}
+
+
+.blackMask {
+    // position: relative;
+
+    &>view {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(0deg, #09205E 0%, rgba(9, 32, 94, 0) 100%);
+        opacity: 0.7;
+        border-radius: 4px;
+    }
+}
+
+.scrollBarDisappear {
+
+    /* 隐藏主轴上的滚动条 */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 在 Firefox 中隐藏滚动条 */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.catalog-title {
+    position: relative;
+    padding-left: 5px;
+    margin-bottom: 14px;
+
+    &-text {
+        z-index: 2;
+        position: relative;
+        font-size: 16px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #1D1D1D;
+        line-height: 18px;
+    }
+
+    &-label {
+        width: 56px;
+        height: 9px;
+        background: linear-gradient(90deg, #E924D5 0%, rgba(233, 36, 213, 0) 100%);
+        border-radius: 4px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1;
+    }
+}

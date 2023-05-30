@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta content="width=device-width,initial-scale=1,user-scalable=no, viewport-fit:cover," name="viewport">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no,address=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+  <title>mini</title>
+  <!-- <script><%= htmlWebpackPlugin.options.script %></script> -->
+  <script>
+    function dl(e, t) {
+        const n = Number(e);
+        return isNaN(n) ? t : n
+    }
+    function pl() {
+        const e = {
+          rpxCalcBaseDeviceWidth: 750
+        }
+          , t = dl(e.rpxCalcMaxDeviceWidth, 960)
+          , n = dl(e.rpxCalcBaseDeviceWidth, 375);
+
+        const prefixWidth = document.documentElement.clientWidth <= 375 ? document.documentElement.clientWidth : document.documentElement.clientWidth - 15
+        function o() {
+            let e = function() {
+                const e = /^Apple/.test(navigator.vendor) && "number" == typeof window.orientation
+                  , t = e && 90 === Math.abs(window.orientation);
+                var n = e ? Math[t ? "max" : "min"](screen.width, screen.height) : screen.width;
+                return Math.min(window.innerWidth, prefixWidth, n) || n
+            }();
+            e = e <= t ? e : n,
+            document.documentElement.style.fontSize = e / 23.4375 + "px"
+        }
+        o(),
+        document.addEventListener("DOMContentLoaded", o),
+        window.addEventListener("load", o),
+        window.addEventListener("resize", o)
+    }
+
+    pl()
+  </script>
+  <script>
+    // Initialize the agent at application startup.
+    // const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3')
+    //   .then(FingerprintJS => FingerprintJS.load())
+  
+    // // Get the visitor identifier when you need it.
+    // fpPromise
+    //   .then(fp => fp.get())
+    //   .then(result => {
+    //     // This is the visitor identifier:
+    //     const visitorId = result.visitorId
+    //     console.log(visitorId)
+    //   })
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>

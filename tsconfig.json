@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "lib",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "rootDir": ".",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": { // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+      "@/const/*": [
+        "src/const/*"
+      ],
+      "@/types/*": [
+        "src/types/*"
+      ],
+      "@/function/*": [
+        "src/function/*"
+      ], 
+      "@/helpers/*": [
+        "src/helpers/*"
+      ],
+      "@/hooks/*": [
+        "src/hooks/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/stores/*": [
+        "src/stores/*"
+      ],
+      "@/images/*": [
+        "src/images/*"
+      ],
+    },
+  },
+  "include": ["./src", "./types"],
+  "compileOnSave": false
+}
