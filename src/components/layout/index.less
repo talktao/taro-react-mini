@@ -1,0 +1,34 @@
+.layout {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    // position: fixed;
+    // width: 100vw;
+    // height: 100vh;
+    // top: 0px;
+    // left: 0px;
+    background: #F8FBFF;
+    position: relative;
+
+    .bottom {
+        height:  200px;
+    }
+    
+    .middle {
+        flex: 1;
+        overflow: auto;
+    }
+
+    &-body {
+        height: 0;
+        overflow: auto;
+        flex: 1;
+        position: relative;
+        font-size: 0px;
+        background: #F8FBFF;
+    }
+
+    // .tabbar {
+    // }
+}
