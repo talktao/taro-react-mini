@@ -1,0 +1,40 @@
+.tabbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: constant(safe-area-inset-bottom); //兼容 IOS<11.2
+    padding-bottom: env(safe-area-inset-bottom); //兼容 IOS>11.2
+    background: #FFFFFF;
+    border-top: 1px solid #EEEEEE;
+    padding-top: 12px;
+    white-space: nowrap;
+
+    &-item {
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        font-size: 0px;
+        padding-bottom: 3px;
+
+        image {
+            width: 26px;
+            height: 26px;
+            // margin-bottom: 4px;
+        }
+
+        .tabbar-txt {
+            font-size: 13px;
+            font-family: SourceHanSansCN;
+            font-weight: 400;
+            color: #2C2C2C;
+        }
+    }
+
+    .selected {
+
+        .tabbar-txt {
+            color: #51b4e8;
+        }
+    }
+}
